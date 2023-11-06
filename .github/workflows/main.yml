@@ -1,0 +1,125 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - development
+  pull_request:
+    branches:
+      - main
+      - master
+      - development
+
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Run tests & coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test:coverage
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Create CI Status File
+        if: success()
+        run: |
+          echo "success" > ci_status.txt
+
+      - name: Upload CI Status Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ci_status
+          path: ci_status.txt
+
+  quality_code:
+    name: Quality Code
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Test quality code
+        run: npm run lint
+
+      - name: Create Lint Status File
+        if: success()
+        run: |
+          echo "success" > lint_status.txt
+
+      - name: Upload Lint Status Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: lint_status
+          path: lint_status.txt
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    needs:
+      - test
+      - quality_code
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload dist repository
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
