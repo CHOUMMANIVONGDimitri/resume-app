@@ -1,4 +1,4 @@
-import { add } from "../src/function-test";
+import { add, logSomething } from "../src/function-test";
 
 describe("Test example", () => {
   test("Should return sum", () => {
@@ -6,5 +6,11 @@ describe("Test example", () => {
     const b = 2;
 
     expect(add(a, b)).toBe(3);
+  });
+
+  test("should display message", () => {
+    const c = "exemple";
+
+    expect(logSomething(c)).toBe("a = exemple");
   });
 });
