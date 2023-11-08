@@ -20,7 +20,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -48,17 +48,6 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-      - name: Create CI Status File
-        if: success()
-        run: |
-          echo "success" > ci_status.txt
-
-      - name: Upload CI Status Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ci_status
-          path: ci_status.txt
-
   quality_code:
     name: Quality Code
     runs-on: ubuntu-latest
@@ -77,17 +66,6 @@ jobs:
 
       - name: Test quality code
         run: npm run lint
-
-      - name: Create Lint Status File
-        if: success()
-        run: |
-          echo "success" > lint_status.txt
-
-      - name: Upload Lint Status Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: lint_status
-          path: lint_status.txt
 
   deploy:
     environment:
@@ -108,7 +86,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'npm'
+          cache: "npm"
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -119,7 +97,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
-          path: './dist'
+          path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
