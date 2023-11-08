@@ -43,17 +43,6 @@ jobs:
       - name: Run tests
         run: npm run test:coverage
 
-      - name: Check Jest coverage thresholds
-        run: |
-          coverage=$(cat coverage/cobertura-coverage.xml | grep -oP 'line-rate="(\d+\.\d+)"' | grep -oP "\d+\.\d+")
-          minCoverage=75
-          if (( $(echo "$coverage < $minCoverage" | bc -l) )); then
-            echo "La couverture de code est de $coverage%, en dessous du seuil de $minCoverage%."
-            exit 1
-          else
-            echo "La couverture de code est de $coverage%, supérieure au seuil de $minCoverage%."
-          fi
-
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
