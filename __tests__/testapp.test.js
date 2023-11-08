@@ -1,4 +1,4 @@
-import add from "../src/function-test";
+import { add } from "../src/function-test";
 
 describe("Test example", () => {
   test("Should return sum", () => {
