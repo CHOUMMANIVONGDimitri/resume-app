@@ -1,3 +1,5 @@
 const add = (a, b) => a + b;
 
-export default add;
+const logSomething = (a) => `a = ${a}`;
+
+export { add, logSomething };

@@ -1,6 +1,12 @@
+[![codecov](https://codecov.io/gh/CHOUMMANIVONGDimitri/resume-app/graph/badge.svg?token=ALHMX24B8T)](https://codecov.io/gh/CHOUMMANIVONGDimitri/resume-app)
+
+# Link App
+
+[click here](https://choummanivongdimitri.github.io/resume-app/) to get on the website.
+
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application was made with the template (on other repository) wich provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
@@ -11,15 +17,16 @@ Currently, two official plugins are available:
 
 ## Environment
 
-Use nvm command to set the correct version of node forthe dev environment.
+Use nvm command to set the correct version of node for the dev environment.
 
 - node version ^18.18.2
 - React version ^18.2.0
 - Vite version ^4.4.11
 - npm version 9.8.1
 
-# Extansions VS Code
+# Extensions VS Code
 
+- Jest (Optional but recommanded)
 
 # Installation
 
@@ -34,7 +41,7 @@ For start development use:
 | Command | Description |
 | ------ | ------ |
 | `npm i` or `install`| install all depedancies of the project|
-| `npm run dev` | Start development (link: [http://localhost:5173/](http://localhost:5173/))|
+| `npm run dev` | Start development (link: [http://localhost:3000/](http://localhost:3000/))|
 | `npm run test`| check unit test of the application |
 | `npm lint`| check all files lint for any errors |
 | `npm run fix`| fix all eslint issues|
@@ -53,10 +60,21 @@ With Github Action we use GitHub CI/CD system to check the unit test and display
 
 # To do
 
-- [ ] Docker implementation
-- [ ] Kubernetes ??
-- [ ] Deployment (check different soft)
+- [ ] Doc CodeCov settings
 - [ ] SEO good practice checker ?
 - [ ] regression limit on unit test
 - [ ] tailwind css lib component ?
 - [ ] .env creation
+- [ ] badges status on readme
+- [ ] link app to implemente
+- [ ] versionning update & realease
+  
+# Check up Setup
+
+- [x] install dependencies
+- [ ] environment setting
+- [x] CodeCov token settings (with Github)
+- [x] vite config
+- [x] check test settings
+- [x] check workflows (`push & pr` on main and dev)
+- [x] run project
