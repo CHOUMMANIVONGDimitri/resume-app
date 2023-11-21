@@ -36,6 +36,16 @@ module.exports = {
         exports: "never",
         functions: "never"
       }
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        ImportDeclaration: "never",
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 3
+        }
+      }
     ]
   }
 };
