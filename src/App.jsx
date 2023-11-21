@@ -1,7 +1,6 @@
 import React from "react";
+import Router from "./routes/Router";
 
-const App = () => (
-  <h1 className="text-3xl font-bold underline">Begin Resume App</h1>
-);
+const App = () => <Router />;
 
 export default App;
