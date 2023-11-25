@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "flowbite-react";
-import CarouselCustom from "../components/Carousel/Carousel"
+import CarouselCustom from "../components/Carousel/Carousel";
 
 const Home = () => (
   <div>
@@ -13,6 +13,6 @@ const Home = () => (
     <img src="https://placehold.co/600x400" alt="test-placeholder" />
     <Button>Test flowbite component</Button>
   </div>
-)
+);
 
 export default Home;
