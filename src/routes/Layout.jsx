@@ -1,11 +1,13 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
-
+import { Outlet } from "react-router-dom";
+import NavbarCustom from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
 const Layout = () => (
   <>
-    <header>
+
+    <NavbarCustom />
+    {/* <header>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a
@@ -77,7 +79,7 @@ const Layout = () => (
           </div>
         </div>
       </nav>
-    </header>
+    </header> */}
     <hr />
     <Outlet />
     <hr />
