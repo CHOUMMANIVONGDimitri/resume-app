@@ -15,4 +15,8 @@ const CardCustom: React.FC<CardCustomProps> = ({ title, content }) => (
   </Card>
 );
 
+CardCustom.defaultProps = {
+  content: ""
+};
+
 export default CardCustom;
