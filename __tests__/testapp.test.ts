@@ -1,4 +1,4 @@
-import { add, logSomething } from "../src/function-test";
+import { add, logSomething } from "../src/function-test.ts";
 
 describe("Test example", () => {
   test("Should return sum", () => {
