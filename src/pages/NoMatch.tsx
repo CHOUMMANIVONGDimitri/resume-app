@@ -1,6 +1,7 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
-const NoMatch = () => (
+const NoMatch: React.FC = () => (
   <div className="py-96">
     <h2 className="text-center bg-white border-gray-200 dark:bg-gray-900 font-semibold dark:text-white">
       404 Page Not Found
