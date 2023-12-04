@@ -4,10 +4,7 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: [
-    "airbnb",
-    "plugin:@typescript-eslint/recommended" // Configuration recommandée pour TypeScript
-  ],
+  extends: ["airbnb", "plugin:@typescript-eslint/recommended"],
   plugins: ["jest", "@typescript-eslint"],
   overrides: [
     {
