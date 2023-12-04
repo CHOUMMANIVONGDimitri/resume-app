@@ -4,7 +4,7 @@ import { HiX } from "react-icons/hi";
 import { MdAnnouncement } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
-const BannerCustom = () => {
+const BannerCustom: React.FC = () => {
   const { t } = useTranslation();
 
   return (

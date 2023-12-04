@@ -4,8 +4,11 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: "airbnb",
-  plugins: ["jest"],
+  extends: [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended" // Configuration recommandée pour TypeScript
+  ],
+  plugins: ["jest", "@typescript-eslint"],
   overrides: [
     {
       env: {
@@ -17,11 +20,15 @@ module.exports = {
       }
     }
   ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
-    sourceType: "module"
+    sourceType: "module",
+    project: "./tsconfig.json"
   },
+  ignorePatterns: ["dist/"],
   rules: {
+    "react/jsx-filename-extension": [1, { extensions: [".tsx", ".jsx"] }],
     "react/function-component-definition": [
       "error",
       { namedComponents: "arrow-function" }

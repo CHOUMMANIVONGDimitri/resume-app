@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
 
-const CarouselCustom = () => (
+const CarouselCustom: React.FC = () => (
   <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
     <Carousel>
       <img

@@ -13,7 +13,13 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Typescript
+
+The project run with `Typescript`, declarations and props use TS convention for the typing.
+
 # Versionning
+
+/_ TO DO _/
 
 ## Environment
 
@@ -38,40 +44,40 @@ For start development use:
 
 # Commande Lines
 
-| Command | Description |
-| ------ | ------ |
-| `npm i` or `install`| install all depedancies of the project|
-| `npm run dev` | Start development (link: [http://localhost:3000/](http://localhost:3000/))|
-| `npm run test`| check unit test of the application |
-| `npm lint`| check all files lint for any errors |
-| `npm run fix`| fix all eslint issues|
-
+| Command              | Description                                                                |
+| -------------------- | -------------------------------------------------------------------------- |
+| `npm i` or `install` | install all depedancies of the project                                     |
+| `npm run dev`        | Start development (link: [http://localhost:3000/](http://localhost:3000/)) |
+| `npm run test`       | check unit test of the application                                         |
+| `npm lint`           | check all files lint for any errors                                        |
+| `npm run fix`        | fix all eslint issues                                                      |
+| `npm run build`      | build the app and check TS errors                                          |
 
 # Test and Coverage
 
 In VS Code you can use Jest extension for easily check your different test or use the command line.
-    
+
 ```
 npm run test
 ```
 
 With Github Action we use GitHub CI/CD system to check the unit test and display coverage on CodeCov support. Coverage percentage is show on every Merge after the test.
 
-
 # To do
 
 - [ ] Doc CodeCov settings
 - [ ] SEO good practice checker ?
 - [ ] regression limit on unit test
-- [ ] tailwind css lib component ?
+- [x] tailwind css lib component ?
 - [ ] .env creation
-- [ ] badges status on readme
-- [ ] link app to implemente
+- [x] badges status on readme
+- [x] link app to implemente
 - [ ] versionning update & realease
-  
+
 # Check up Setup
 
 - [x] install dependencies
+- [x] implement Typescript environment
 - [ ] environment setting
 - [x] CodeCov token settings (with Github)
 - [x] vite config

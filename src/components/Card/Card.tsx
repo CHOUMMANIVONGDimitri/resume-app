@@ -1,8 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Card } from "flowbite-react";
 
-const CardCustom = ({ title, content }) => (
+interface CardCustomProps {
+  title: string;
+  content?: string;
+}
+
+const CardCustom: React.FC<CardCustomProps> = ({ title, content }) => (
   <Card href="#" className="max-w-sm">
     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
       {title}
@@ -11,13 +15,8 @@ const CardCustom = ({ title, content }) => (
   </Card>
 );
 
-export default CardCustom;
-
-CardCustom.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string
-};
-
 CardCustom.defaultProps = {
   content: ""
 };
+
+export default CardCustom;
