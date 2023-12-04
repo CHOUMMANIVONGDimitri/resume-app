@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "flowbite-react";
 
-const NavLogo = () => (
+const NavLogo: React.FC = () => (
   <>
     <Navbar.Brand href="https://flowbite-react.com" />
     <img
@@ -15,7 +15,7 @@ const NavLogo = () => (
   </>
 );
 
-const NavbarCustom = () => (
+const NavbarCustom: React.FC = () => (
   <Navbar fluid rounded>
     <NavLogo />
     <Navbar.Toggle />

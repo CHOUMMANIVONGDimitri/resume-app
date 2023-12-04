@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import CarouselCustom from "../components/Carousel/Carousel";
-import CardCustom from "../components/Card/Card";
+import CarouselCustom from "../components/Carousel/Carousel.tsx";
+import CardCustom from "../components/Card/Card.tsx";
 
-const Home = () => {
+const Home: React.FC = () => {
   const { t } = useTranslation();
 
   return (
