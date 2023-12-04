@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import CarouselCustom from "../components/Carousel/Carousel";
 import CardCustom from "../components/Card/Card";
