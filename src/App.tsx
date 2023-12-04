@@ -1,5 +1,6 @@
-import Router from "./routes/Router";
+import React from "react";
+import Router from "./routes/Router.tsx";
 
-const App = () => <Router />;
+const App: React.FC = () => <Router />;
 
 export default App;
