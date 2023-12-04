@@ -1,4 +1,7 @@
-export default {
+import type { Config } from "jest";
+
+const config: Config = {
+  testEnvironment: "jsdom",
   testMatch: ["**/__tests__/**/*.test.(js|jsx|ts|tsx)"],
   testPathIgnorePatterns: ["/node_modules/", "/src/assets/"],
   coveragePathIgnorePatterns: ["/node_modules/", "/src/assets/"],
@@ -13,3 +16,5 @@ export default {
     }
   }
 };
+
+export default config;
