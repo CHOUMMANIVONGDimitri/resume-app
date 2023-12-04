@@ -40,7 +40,7 @@ module.exports = {
     "object-curly-newline": [
       "error",
       {
-        ImportDeclaration: "never",
+        ImportDeclaration: { multiline: true, minProperties: 3 },
         ExportDeclaration: {
           multiline: true,
           minProperties: 3
