@@ -4,14 +4,35 @@ import NavbarCustom from "../components/Navbar/Navbar.tsx";
 import Footer from "../components/Footer/Footer.tsx";
 import BannerCustom from "../components/Banner/Banner.tsx";
 
+const navLinks = [
+  {
+    name: "Home",
+    path: ""
+  },
+  {
+    name: "About",
+    path: "about"
+  },
+  {
+    name: "Projects",
+    path: "projects"
+  },
+  {
+    name: "Contact",
+    path: "contact"
+  }
+];
+
 const Layout: React.FC = () => (
   <>
-    <div className="fixed w-full z-20 top-0 start-0">
-      <BannerCustom />
-      <NavbarCustom />
-    </div>
+    <BannerCustom />
+    <header className="sticky z-10 w-full top-0 start-0">
+      <NavbarCustom nameApp="resume-app" linksApp={navLinks} />
+    </header>
     <hr />
-    <Outlet />
+    <main>
+      <Outlet />
+    </main>
     <hr />
     <Footer />
   </>
