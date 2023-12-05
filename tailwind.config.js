@@ -6,7 +6,11 @@ export default {
     "node_modules/flowbite-react/lib/esm/**/*.js"
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        "mountain-home": "url('/public/backgrounds/mountain-background.jpg')"
+      }
+    }
   },
   // eslint-disable-next-line global-require
   plugins: [require("flowbite/plugin")]
