@@ -4,7 +4,11 @@ import { HiX } from "react-icons/hi";
 import { MdAnnouncement } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
-const BannerCustom: React.FC = () => {
+interface BannerCustomProps {
+  path?: string;
+}
+
+const BannerCustom: React.FC<BannerCustomProps> = ({ path }) => {
   const { t } = useTranslation();
 
   return (
@@ -17,7 +21,8 @@ const BannerCustom: React.FC = () => {
               {`${t("banner.message")} `}
               {/* TO DO : create variable for better management of links */}
               <a
-                href="https://www.google.com"
+                href={path}
+                target="blank"
                 className="decoration-600 dark:decoration-500 inline font-medium text-cyan-600 underline decoration-solid underline-offset-2 hover:no-underline dark:text-cyan-500"
               >
                 {t("banner.link")}
@@ -34,6 +39,10 @@ const BannerCustom: React.FC = () => {
       </div>
     </Banner>
   );
+};
+
+BannerCustom.defaultProps = {
+  path: "#"
 };
 
 export default BannerCustom;

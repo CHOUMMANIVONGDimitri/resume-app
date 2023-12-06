@@ -5,14 +5,16 @@ interface CardCustomProps {
   title: string;
   content?: string;
   children?: React.ReactNode;
+  path?: string;
 }
 
 const CardCustom: React.FC<CardCustomProps> = ({
   title,
   content,
-  children
+  children,
+  path
 }) => (
-  <Card href="#" className="max-w-sm">
+  <Card href={path} className="max-w-sm">
     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
       {title}
     </h5>
@@ -23,7 +25,8 @@ const CardCustom: React.FC<CardCustomProps> = ({
 
 CardCustom.defaultProps = {
   content: "",
-  children: undefined
+  children: undefined,
+  path: "#"
 };
 
 export default CardCustom;
