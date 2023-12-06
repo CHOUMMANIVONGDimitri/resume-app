@@ -29,7 +29,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col items-center pb-10">
             <img
               className="mb-3 rounded-full shadow-lg"
-              src="/public/images/profile-picture.png"
+              src="./images/profile-picture.png"
               height="96"
               width="96"
               alt="placeholder"
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
           </div>
           <img
             className="h-96 rounded-2xl mx-auto md:mx-0"
-            src="/public/images/background-github-profil.jpg"
+            src="./images/background-github-profil.jpg"
             alt="github profile user"
           />
         </div>
