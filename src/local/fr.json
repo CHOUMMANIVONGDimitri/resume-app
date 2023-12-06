@@ -1,1 +1,21 @@
-{}
+{
+    "trad-fr": {
+        "banner": {
+            "message": "version 1.0.0 site vitrine - 2023",
+            "link": "répertoire github de application"
+        },
+        "navbar": {
+            "title": "CHOUMMANIVONG DIMITRI"
+        },
+        "pages": {
+            "home": {
+                "section-1": {
+                    "card": {
+                        "title": "Hello Dev World!",
+                        "content": "Passionné de développement full stack et avide d'explorer les multiples facettes de ce domaine en constante évolution, je suis un professionnel polyvalent à la recherche de nouvelles opportunités pour mettre à profit mes compétences techniques et mon désir insatiable de découvrir et maîtriser de nouvelles technologies."
+                    }
+                }
+            }
+        }
+    }
+}
