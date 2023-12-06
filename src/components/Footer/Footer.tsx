@@ -8,7 +8,7 @@ const Footer: React.FC = () => (
         <div className="mb-6 md:mb-0">
           <div className="flex items-center">
             <img
-              src="/public/images/logo-app.jpg"
+              src="./images/logo-app.jpg"
               className=" me-3 rounded-full h-20"
               alt="website logo"
             />
@@ -55,7 +55,7 @@ const Footer: React.FC = () => (
               </li>
               <li className="mb-4">
                 <Link
-                  to="https://github.com/CHOUMMANIVONGDimitri"
+                  to="https://www.linkedin.com/in/dimitri-choummanivong-507669228/"
                   className="hover:underline "
                 >
                   LinkedIn
