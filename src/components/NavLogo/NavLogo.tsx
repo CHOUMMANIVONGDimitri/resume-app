@@ -5,9 +5,10 @@ import { useTranslation } from "react-i18next";
 interface NavLogoProps {
   nameApp: string;
   logo?: ReactElement<HTMLImageElement>;
+  imgSrc?: string;
 }
 
-const NavLogo: React.FC<NavLogoProps> = ({ nameApp, logo }) => {
+const NavLogo: React.FC<NavLogoProps> = ({ nameApp, logo, imgSrc }) => {
   const { t } = useTranslation();
 
   return (
@@ -15,8 +16,8 @@ const NavLogo: React.FC<NavLogoProps> = ({ nameApp, logo }) => {
       <Link to={nameApp}>
         {logo || (
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="mr-3 h-6 sm:h-9"
+            src={imgSrc || "https://flowbite.com/docs/images/logo.svg"}
+            className="mr-3 h-6 sm:h-9 rounded-full"
             alt="application clickable logo"
           />
         )}
@@ -29,7 +30,8 @@ const NavLogo: React.FC<NavLogoProps> = ({ nameApp, logo }) => {
 };
 
 NavLogo.defaultProps = {
-  logo: undefined
+  logo: undefined,
+  imgSrc: ""
 };
 
 export default NavLogo;
