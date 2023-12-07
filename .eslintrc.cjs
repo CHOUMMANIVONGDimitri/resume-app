@@ -30,6 +30,8 @@ module.exports = {
       "error",
       { namedComponents: "arrow-function" }
     ],
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
     quotes: ["error", "double"],
     "comma-dangle": [
       "error",
