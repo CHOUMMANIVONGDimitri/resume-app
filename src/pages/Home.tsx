@@ -5,6 +5,8 @@ import CarouselCustom from "../components/Carousel/Carousel.tsx";
 import CardCustom from "../components/Card/Card.tsx";
 import Separator from "../components/Separator/Separator.tsx";
 
+import datas from "../constants/datas/index.ts";
+
 const Home: React.FC = () => {
   const { t } = useTranslation();
 
@@ -21,7 +23,7 @@ const Home: React.FC = () => {
         <p className="text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-5 mb-10 mx-auto w-1/2">
           {t("pages.home.section-1.paragraph")}
         </p>
-        <CarouselCustom />
+        <CarouselCustom data={datas} />
       </section>
       <Separator content="Informations" />
       <section className="flex my-10 flex-col flex-nowrap items-center py-24">
