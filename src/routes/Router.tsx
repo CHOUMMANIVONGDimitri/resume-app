@@ -6,7 +6,7 @@ import Home from "../pages/Home.tsx";
 import About from "../pages/About.tsx";
 import Projects from "../pages/Projets.tsx";
 import Contact from "../pages/Contact.tsx";
-import NoMatch from "../pages/NoMatch.tsx";
+import NoMatch from "../pages/404.tsx";
 
 const Router: React.FC = () => (
   <Routes>
