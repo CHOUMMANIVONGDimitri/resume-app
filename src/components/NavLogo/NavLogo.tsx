@@ -22,7 +22,7 @@ const NavLogo: React.FC<NavLogoProps> = ({ nameApp, logo, imgSrc }) => {
           />
         )}
       </Link>
-      <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+      <span className="self-center whitespace-nowrap text-medium md:text-xl font-semibold dark:text-white">
         {`${t("navbar.title")}`}
       </span>
     </>

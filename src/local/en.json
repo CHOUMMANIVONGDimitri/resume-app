@@ -1,25 +1,31 @@
 {
-    "banner": {
-        "message": "version 1.0.0 resume-app - 2023",
-        "link": "repo github of the application"
-    },
-    "navbar": {
-        "title": "CHOUMMANIVONG DIMITRI"
-    },
-    "pages": {
-        "home": {
-            "section-1": {
-                "paragraph": "The various news about me and my ongoing projects can be found in the Projects section of the website for more information.",
-                "card": {
-                    "title": "Hello Dev World!",
-                    "content": "Enthusiastic full-stack developer with mastery across various technologies, eager to delve deeper into this ever-evolving universe. I am a versatile professional seeking new opportunities to leverage my technical skills and insatiable desire to explore and master emerging technologies."
-                }
-            },
-            "section-2": {
-                "github": {
-                    "paragraph": "GitHub is a collaborative platform for developers. From web apps to utilities, these projects highlight my skills as a full-stack developer, showcasing my expertise across various technologies. I mainly use this platform for my projects."
-                }
-            }
+  "banner": {
+    "message": "version 1.0.0 resume-app - 2023",
+    "link": "repo github of the application"
+  },
+  "navbar": {
+    "title": "CHOUMMANIVONG DIMITRI"
+  },
+  "pages": {
+    "home": {
+      "section-1": {
+        "paragraph": "The various news about me and my ongoing projects can be found in the Projects section of the website for more information.",
+        "card": {
+          "title": "Hello Dev World!",
+          "content": "Enthusiastic full-stack developer with mastery across various technologies, eager to delve deeper into this ever-evolving universe. I am a versatile professional seeking new opportunities to leverage my technical skills and insatiable desire to explore and master emerging technologies."
         }
+      },
+      "section-2": {
+        "github": {
+          "paragraph": "GitHub is a collaborative platform for developers. From web apps to utilities, these projects highlight my skills as a full-stack developer, showcasing my expertise across various technologies. I mainly use this platform for my projects."
+        }
+      }
+    },
+    "about": {
+      "section-1": {
+        "title": "Professional experiences",
+        "content": "This part describes my professional journey from now until before I entered the field of web development."
+      }
     }
+  }
 }
