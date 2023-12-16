@@ -1,6 +1,17 @@
 {
-    "singleQuote": false,
-    "trailingComma": "none",
-    "endOfLine": "lf",
-    "semi": true
+  "singleQuote": false,
+  "trailingComma": "none",
+  "endOfLine": "lf",
+  "semi": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
+  "object-curly-newline": [
+    "error",
+    {
+      "ObjectExpression": { "multiline": true, "minProperties": 3 },
+      "ObjectPattern": { "multiline": true, "minProperties": 3 },
+      "ImportDeclaration": { "multiline": true, "minProperties": 3 },
+      "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+    }
+  ]
 }
