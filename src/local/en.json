@@ -27,5 +27,9 @@
         "content": "This part describes my professional journey from now until before I entered the field of web development."
       }
     }
+  },
+  "buttons": {
+    "view-more": "View more",
+    "submit": "Submit"
   }
 }

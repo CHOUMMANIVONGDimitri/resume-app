@@ -43,15 +43,6 @@ module.exports = {
         functions: "never"
       }
     ],
-    "object-curly-newline": [
-      "error",
-      {
-        ImportDeclaration: { multiline: true, minProperties: 3 },
-        ExportDeclaration: {
-          multiline: true,
-          minProperties: 3
-        }
-      }
-    ]
+    "object-curly-newline": "off"
   }
 };

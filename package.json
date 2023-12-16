@@ -13,6 +13,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "flowbite": "^2.2.0",
     "flowbite-react": "^0.6.4",
     "i18next": "^23.7.6",

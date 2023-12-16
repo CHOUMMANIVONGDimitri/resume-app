@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "mountain-home": "url('/public/backgrounds/mountain-background.jpg')"
+        "mountain-home": "url('/backgrounds/mountain-background.jpg')"
       }
     }
   },

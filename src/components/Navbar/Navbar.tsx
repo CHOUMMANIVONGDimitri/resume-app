@@ -26,7 +26,11 @@ const NavbarCustom: React.FC<NavbarProps> = ({
     {logoApp || <NavLogo nameApp="/resume-app/" imgSrc={imgSrc} />}
     <Navbar.Toggle />
     <Navbar.Collapse>
-      {linksApp?.map((l) => <Link to={`/${nameApp}/${l.path}`}>{l.name}</Link>)}
+      {linksApp?.map((l) => (
+        <Link key={l.name} to={`/${nameApp}/${l.path}`}>
+          {l.name}
+        </Link>
+      ))}
     </Navbar.Collapse>
   </Navbar>
 );
