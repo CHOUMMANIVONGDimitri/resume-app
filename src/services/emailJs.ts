@@ -20,12 +20,14 @@ const sendEmail = async (
         form.current,
         import.meta.env.VITE_EMAIL_USER_ID
       );
+      return true;
     } catch (error: unknown) {
       console.error(error);
     }
   } else {
     console.error("Form reference is not set.");
   }
+  return false;
 };
 
 export default {

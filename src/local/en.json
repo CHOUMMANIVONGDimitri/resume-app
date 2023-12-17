@@ -26,6 +26,41 @@
         "title": "Professional experiences",
         "content": "This part describes my professional journey from now until before I entered the field of web development."
       }
+    },
+    "contact": {
+      "section-1": {
+        "title": "Contact me",
+        "content": "Here you can contact me with the form below or send me an email directly to the following address : {{email}}"
+      },
+      "form": {
+        "subject": {
+          "label": "Titre",
+          "default-value": "Recruitment message"
+        },
+        "fullName": {
+          "label": "Your fullname",
+          "placeholder": "enter your fullname"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "enter your company"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "enter your email"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "enter your message here"
+        }
+      },
+      "alert": {
+        "success": {
+          "title": "Success",
+          "content": "Your message was successfully send.",
+          "go-back": "Return to the home page"
+        }
+      }
     }
   },
   "buttons": {

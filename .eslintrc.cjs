@@ -30,6 +30,7 @@ module.exports = {
       "error",
       { namedComponents: "arrow-function" }
     ],
+    "react/jsx-wrap-multilines": "off",
     "operator-linebreak": "off",
     "implicit-arrow-linebreak": "off",
     quotes: ["error", "double"],
