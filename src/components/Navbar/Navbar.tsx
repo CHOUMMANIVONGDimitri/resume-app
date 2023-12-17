@@ -10,24 +10,18 @@ interface NavLinks {
 }
 
 interface NavbarProps {
-  nameApp: string;
   linksApp: Array<NavLinks> | [];
   logoApp?: React.ReactElement<HTMLImageElement>;
   imgSrc?: string;
 }
 
-const NavbarCustom: React.FC<NavbarProps> = ({
-  nameApp,
-  linksApp,
-  logoApp,
-  imgSrc
-}) => (
+const NavbarCustom: React.FC<NavbarProps> = ({ linksApp, logoApp, imgSrc }) => (
   <Navbar fluid rounded>
-    {logoApp || <NavLogo nameApp="/resume-app/" imgSrc={imgSrc} />}
+    {logoApp || <NavLogo nameApp="/" imgSrc={imgSrc} />}
     <Navbar.Toggle />
     <Navbar.Collapse>
       {linksApp?.map((l) => (
-        <Link key={l.name} to={`/${nameApp}/${l.path}`}>
+        <Link key={l.name} to={`/${l.path}`}>
           {l.name}
         </Link>
       ))}

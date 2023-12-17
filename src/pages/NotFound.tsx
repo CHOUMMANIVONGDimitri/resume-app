@@ -10,7 +10,7 @@ const NoMatch: React.FC = () => (
     </h2>
 
     <p className="bg-white border-gray-200 dark:bg-gray-900 font-semibold dark:text-white text-center w-full flex justify-center mt-10">
-      <Link to="/resume-app/">
+      <Link to="/">
         <Button size="lg">
           <HiOutlineArrowLeft className="mr-2 h-5 w-5" />
           Go to the home page
