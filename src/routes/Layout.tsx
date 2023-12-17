@@ -27,11 +27,7 @@ const Layout: React.FC = () => (
   <>
     <BannerCustom path="https://github.com/CHOUMMANIVONGDimitri/resume-app" />
     <header className="sticky z-10 w-full top-0 start-0">
-      <NavbarCustom
-        imgSrc="./images/logo-app.jpg"
-        nameApp="resume-app"
-        linksApp={navLinks}
-      />
+      <NavbarCustom imgSrc="./images/logo-app.jpg" linksApp={navLinks} />
     </header>
     <hr />
     <main>

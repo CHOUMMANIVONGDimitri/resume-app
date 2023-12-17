@@ -10,7 +10,7 @@ import NotFound from "../pages/NotFound.tsx";
 
 const Router: React.FC = () => (
   <Routes>
-    <Route path="/resume-app/" element={<Layout />}>
+    <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="projects" element={<Projects />} />
