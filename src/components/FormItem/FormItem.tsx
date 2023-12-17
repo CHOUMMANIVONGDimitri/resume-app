@@ -8,6 +8,7 @@ interface FormItemProps {
   children?: ReactNode;
   readOnly?: boolean;
   required?: boolean;
+  placeholder?: string;
 }
 
 const FormItem: React.FC<FormItemProps> = ({
@@ -16,7 +17,8 @@ const FormItem: React.FC<FormItemProps> = ({
   name,
   children,
   readOnly,
-  required
+  required,
+  placeholder
 }) => {
   const [item, setItem] = useState<string>(defaultValue || "");
 
@@ -32,6 +34,7 @@ const FormItem: React.FC<FormItemProps> = ({
           onChange={(e) => setItem(e.target.value)}
           readOnly={readOnly}
           required={required}
+          placeholder={placeholder}
         />
       )}
     </div>
@@ -43,7 +46,8 @@ FormItem.defaultProps = {
   label: "",
   children: undefined,
   readOnly: false,
-  required: false
+  required: false,
+  placeholder: ""
 };
 
 export default FormItem;
