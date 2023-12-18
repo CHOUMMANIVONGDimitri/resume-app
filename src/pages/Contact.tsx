@@ -66,6 +66,13 @@ const About: React.FC = () => {
               placeholder={t("pages.contact.form.company.placeholder")}
               required
             />
+            <FormItem
+              name="job"
+              label={t("pages.contact.form.job.label")}
+              defaultValue={t("pages.contact.form.job.default")}
+              placeholder={t("pages.contact.form.job.placeholder")}
+              required
+            />
             <FormItem name="email" label={t("pages.contact.form.email.label")}>
               <TextInput
                 id="email"
