@@ -27,6 +27,24 @@
         "content": "This part describes my professional journey from now until before I entered the field of web development."
       }
     },
+    "projects": {
+      "section-1": {
+        "title": "My Projects",
+        "content": "On this page you will find all the projects in which I have worked, whether alone or in collaboration with other developers.In this Page you can find all of my projects"
+      },
+      "section-2": {
+        "project-1": {
+          "card": {
+            "title": "EYE 4 TAP",
+            "content": "An eye keyboard coordination game using eye tracking, you have to follow a screen split into 4 parts which flashes randomly and make as many points as possible."
+          }
+        }
+      },
+      "separator": {
+        "project-1": "EYE 4 TAP",
+        "project-2": "CELLSFORCE"
+      }
+    },
     "contact": {
       "section-1": {
         "title": "Contact me",
@@ -44,6 +62,11 @@
         "company": {
           "label": "Company",
           "placeholder": "enter your company"
+        },
+        "job": {
+          "label": "Job",
+          "default": "employee",
+          "placeholder": "what's your job"
         },
         "email": {
           "label": "Email",
@@ -66,5 +89,6 @@
   "buttons": {
     "view-more": "View more",
     "submit": "Submit"
-  }
+  },
+  "work-in-progress": "Work in progress..."
 }
