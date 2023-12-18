@@ -3,6 +3,7 @@ import moment from "moment";
 import { useTranslation } from "react-i18next";
 import TimeLine from "../components/TimeLine/TimeLine.tsx";
 import Separator from "../components/Separator/Separator.tsx";
+import WorkInProgress from "../components/WorkInProgress/WorkInProgress.tsx";
 
 const historyDev = [
   {
@@ -31,23 +32,25 @@ const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      id="timeline"
-      className="w-1/2 flex-col gap-10 justify-center mx-auto"
-    >
-      <div className="mb-5 mt-10">
-        <h1 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl dark:text-white">
-          {t("pages.about.section-1.title")}
-        </h1>
-        <p className="mb-6 text-medium font-normal text-gray-500 lg:text-lg sm:px-16 xl:px-48 dark:text-gray-400">
-          {t("pages.about.section-1.content")}
-        </p>
-      </div>
-      <Separator content="Developer" />
-      <TimeLine datas={historyDev} />
-      <Separator content="Before Become Developer" />
-      <h2 className="font-medium text-center my-24">Working In Progress...</h2>
-    </section>
+    <>
+      <section
+        id="timeline"
+        className="w-1/2 flex-col gap-10 justify-center mx-auto"
+      >
+        <div className="mb-5 mt-10">
+          <h1 className="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl dark:text-white">
+            {t("pages.about.section-1.title")}
+          </h1>
+          <p className="mb-6 text-medium font-normal text-gray-500 lg:text-lg sm:px-16 xl:px-48 dark:text-gray-400">
+            {t("pages.about.section-1.content")}
+          </p>
+        </div>
+        <Separator content="Developer" />
+        <TimeLine datas={historyDev} />
+        <Separator content="Before Become Developer" />
+      </section>
+      <WorkInProgress />
+    </>
   );
 };
 
