@@ -24,7 +24,7 @@ const historyDev = [
   {
     date: moment("2023-12-01"),
     title: "Collaboration work with Saleforces",
-    body: "When I was studying at Wild Code School, one of the projects to be submitted was a subject with customer needs from various companies including Salesforce who were specifying requests for an ideation platform. With the help of two other developers we created CellForce.When I was on WildCode"
+    body: "When I was studying at Wild Code School, one of the projects to be submitted was a subject with customer needs from various companies including Salesforce who were specifying requests for an ideation platform. With the help of two other developers we created CellForce."
   }
 ];
 
