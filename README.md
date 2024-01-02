@@ -63,13 +63,25 @@ npm run test
 
 With Github Action we use GitHub CI/CD system to check the unit test and display coverage on CodeCov support. Coverage percentage is show on every Merge after the test.
 
+# EmailJS
+
+EmailJS is a web service that allows the sending of emails, the sending is triggered when the user fills out a form (see the doc for more information). Notice that service use one of your email so make sure that you choose the right email to receive all of the emails.
+
+[see the doc](https://www.emailjs.com/docs/examples/reactjs/)
+
+Check tutorial section for understand how it works
+
+## Env variable with EmailJS
+
+On the `.env.sample` file you can find different variable that use EmailJS ID, you can find them on your dashboard.
+
 # To do
 
 - [ ] Doc CodeCov settings
 - [ ] SEO good practice checker ?
-- [ ] regression limit on unit test
+- [x] regression limit on unit test
 - [x] tailwind css lib component ?
-- [ ] .env creation
+- [x] .env creation
 - [x] badges status on readme
 - [x] link app to implemente
 - [ ] versionning update & realease
