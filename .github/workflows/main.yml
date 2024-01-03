@@ -92,18 +92,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Debug secrets
-        run: |
-          echo "VITE_EMAIL_SERVICE_ID=${{ secrets.VITE_EMAIL_SERVICE_ID }}"
-          echo "VITE_EMAIL_TEMPLATE_ID=${{ secrets.VITE_EMAIL_TEMPLATE_ID }}"
-          echo "VITE_EMAIL_USER_ID=${{ secrets.VITE_EMAIL_USER_ID }}"
-
       - name: Build
         run: npm run build
         env:
           VITE_EMAIL_SERVICE_ID: ${{ secrets.VITE_EMAIL_SERVICE_ID }}
           VITE_EMAIL_TEMPLATE_ID: ${{ secrets.VITE_EMAIL_TEMPLATE_ID }}
           VITE_EMAIL_USER_ID: ${{ secrets.VITE_EMAIL_USER_ID }}
+          VITE_GITHUB_USERNAME: ${{ secrets.VITE_GITHUB_USERNAME }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
