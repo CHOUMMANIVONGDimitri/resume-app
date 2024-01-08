@@ -5,9 +5,9 @@ import { render } from "@testing-library/react";
 import CardCustom from "../../src/components/Card/Card.tsx";
 
 describe("CardCustom Component", () => {
-  test("renders CardCustom with title", () => {
-    const title = "Sample Title";
+  const title = "Sample Title";
 
+  test("renders CardCustom with title", () => {
     const content = "Sample Content";
 
     const { getByText } = render(
@@ -24,12 +24,20 @@ describe("CardCustom Component", () => {
   });
 
   test("renders CardCustom without content", () => {
-    const title = "Sample Title";
-
     const { getByText } = render(<CardCustom title={title} />);
 
     const titleElement = getByText(title);
 
     expect(titleElement).toBeInTheDocument();
+  });
+
+  test("renders CardCustom with specific className", () => {
+    const { getAllByTestId } = render(<CardCustom title={title} animation />);
+
+    const cardCustomElement = getAllByTestId("flowbite-card");
+
+    cardCustomElement.forEach((element) => {
+      expect(element).toHaveClass("ease-in-out hover:scale-125 duration-100");
+    });
   });
 });
