@@ -6,15 +6,30 @@ interface CardCustomProps {
   content?: string;
   children?: React.ReactNode;
   path?: string;
+  centered?: boolean;
+  animation?: boolean;
+  imgSrc?: string;
+  imgAlt?: string;
 }
 
 const CardCustom: React.FC<CardCustomProps> = ({
   title,
   content,
   children,
-  path
+  path,
+  centered,
+  imgAlt,
+  imgSrc,
+  animation
 }) => (
-  <Card href={path} className="max-w-sm">
+  <Card
+    href={path}
+    className={`flex flex-row max-w-sm ${centered ? "justify-center" : ""} ${
+      animation ? "ease-in-out hover:scale-125 duration-100" : ""
+    } `}
+    imgSrc={imgSrc}
+    imgAlt={imgAlt}
+  >
     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
       {title}
     </h5>
@@ -26,7 +41,11 @@ const CardCustom: React.FC<CardCustomProps> = ({
 CardCustom.defaultProps = {
   content: "",
   children: undefined,
-  path: "#"
+  path: "#",
+  centered: true,
+  imgAlt: "",
+  imgSrc: "",
+  animation: false
 };
 
 export default CardCustom;
