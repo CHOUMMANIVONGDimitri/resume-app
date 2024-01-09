@@ -69,12 +69,12 @@ const Footer: React.FC = () => (
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <Link to="/resume-app/" className="hover:underline">
+                <Link to="privatepolicy" className="hover:underline">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/resume-app/" className="hover:underline">
+                <Link to="/" className="hover:underline">
                   Terms &amp; Conditions
                 </Link>
               </li>
