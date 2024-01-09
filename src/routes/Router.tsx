@@ -6,6 +6,7 @@ import Home from "../pages/Home.tsx";
 import About from "../pages/About.tsx";
 import Projects from "../pages/Projets.tsx";
 import Contact from "../pages/Contact.tsx";
+import PrivatePolicy from "../pages/PrivatePolicy.tsx";
 import NotFound from "../pages/NotFound.tsx";
 
 const Router: React.FC = () => (
@@ -15,6 +16,7 @@ const Router: React.FC = () => (
       <Route path="about" element={<About />} />
       <Route path="projects" element={<Projects />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="privatepolicy" element={<PrivatePolicy />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   </Routes>
